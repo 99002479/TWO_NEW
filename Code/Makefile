@@ -1,10 +1,18 @@
 SRC = main.c\
 src/sum.c\
+test/test_sum.c\
+main.c
 
-INC = -Iinc
+INC = -Iunity\
+-Iinc\
+-Itest
 
 PROJECT_NAME = sum.out
+
 BUILD = build
+
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 $(PROJECT_NAME): $(SRC)
 	gcc $(SRC) $(INC) -o $(PROJECT_NAME)
