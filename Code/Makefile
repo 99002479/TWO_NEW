@@ -9,8 +9,6 @@ INC = -Iunity\
 
 PROJECT_NAME = sum.out
 
-BUILD = build
-
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
@@ -19,6 +17,3 @@ $(PROJECT_NAME): $(SRC)
 
 run:$(PROJECT_NAME)
 	./${PROJECT_NAME}
-
-$(BUILD):
-mkdir build
