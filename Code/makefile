@@ -12,8 +12,5 @@ $(PROJECT_NAME): $(SRC)
 run:$(PROJECT_NAME)
 	./${PROJECT_NAME}
 
-
-clean:
-	rm -rf $(PROJECT_NAME) documentation/html
 $(BUILD):
 mkdir build
