@@ -20,7 +20,10 @@ struct account {
   int tl,sl,ts;
 
  
-
+int checkbalance(float old, float pay)
+{
+    return (old-pay);
+}
 
    void input()
 	{
@@ -49,8 +52,24 @@ struct account {
 	  scanf("%f",&customer.payment);
 	  printf("         Payment date(mm/dd/yyyy):");
 	  scanf("%d/%d/%d",&customer.lastpayment.month,&customer.lastpayment.day,&customer.lastpayment.year);
-	  return;
+	  
+	  char ch;
+	  float balance;
+	   do{
+		printf("\nCheck Balance?");
+		ch=getche();
+	 }while(ch!='Y' && ch!='N');
+	 switch(ch){
+	      case 'Y':
+		    balance = checkbalance(customer.oldbalance,customer.payment);
+		    printf("\nCurrent Balance:%f\n",balance);
+		    return;
+          case 'N':
+	        return;
+	 }
+	 return;
    }
+
 
    void writefile()
    {
