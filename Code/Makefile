@@ -10,25 +10,6 @@ INC = -Iunity\
 PROJECT_NAME = pay.out
 
 
-	
-BUILD = build
-
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
-
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
-
-# Default target built
-$(PROJECT_NAME):all
-
-# Run the target even if the matching name exists
-.PHONY: run clean test  doc all
-
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-
-
-
 $(PROJECT_NAME): $(SRC)
 	gcc $(SRC) $(INC) -o $(PROJECT_NAME)
 
@@ -39,8 +20,3 @@ doc:
 
 clean:
 	rm -rf $(PROJECT_NAME) documentation/html
-
-
-
-$(BUILD):
-	mkdir build
