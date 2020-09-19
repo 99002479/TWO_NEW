@@ -15,6 +15,8 @@
 	{
   		TEST_ASSERT_EQUAL(1, getaccounttype(1000, 50));
   		TEST_ASSERT_EQUAL(0, getaccounttype(100, 150));
+		TEST_ASSERT_EQUAL(1, getaccounttype(100, 0));
+		TEST_ASSERT_EQUAL(-1, getaccounttype(-100, 0));
 	}
 
 
