@@ -25,6 +25,17 @@ int checkbalance(float old, float pay)
     return (old-pay);
 }
 
+int getaccounttype(float old, float pay)
+ {
+     int result;
+     if(pay>0)
+        result = (pay > old)? 0 : 1;
+     else
+        result = (old > 0)? 1 : -1;
+    printf("\n%d",result);
+    return result;
+ }
+
    void input()
 	{
 	  FILE *fp=fopen("Record.dat","rb");
@@ -63,9 +74,23 @@ int checkbalance(float old, float pay)
 	      case 'Y':
 		    balance = checkbalance(customer.oldbalance,customer.payment);
 		    printf("\nCurrent Balance:%f\n",balance);
-		    return;
+		    break;
           case 'N':
-	        return;
+	        break;
+	 }
+	
+	int result;
+        do{
+		printf("\nCheck Account Type?");
+		ch=getche();
+	 }while(ch!='Y' && ch!='N');
+	 switch(ch){
+	      case 'Y':
+           	 result = getaccounttype(customer.oldbalance, customer.payment);
+          	 printf("\nRESULT:%d\n",result);
+            	 break;
+              case 'N':
+            	 break;
 	 }
 	 return;
    }
