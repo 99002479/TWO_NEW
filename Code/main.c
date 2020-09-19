@@ -26,9 +26,9 @@ void main()
 			for(i=0;i<n;i++){
 				input();
 				if(customer.payment>0)
-					customer.acct_type=(customer.payment > customer.oldbalance)? 'O': 'D';
+					customer.acct_type=(customer.payment > customer.oldbalance)? 'I': 'S';
 				else
-					customer.acct_type=(customer.oldbalance>0)?'D' : 'C';
+					customer.acct_type=(customer.oldbalance>0)?'S' : 'N';
 				customer.newbalance=customer.oldbalance - customer.payment;
 				writefile();
 			}
