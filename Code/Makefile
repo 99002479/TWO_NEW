@@ -1,13 +1,13 @@
-SRC = unity/unity.c\
-src/pay.c\
-test/test_pay.c\
-main.c
+SRC = main.c\
 
-INC = -Iunity\
--Iinc\
--Itest
+src/pay.c\
+
+INC = -Iinc
+
 
 PROJECT_NAME = pay.out
+
+BUILD = build
 
 
 $(PROJECT_NAME): $(SRC)
@@ -15,8 +15,10 @@ $(PROJECT_NAME): $(SRC)
 
 run:$(PROJECT_NAME)
 	./${PROJECT_NAME}
-doc:
-	make -C documentation
 
+ 
 clean:
 	rm -rf $(PROJECT_NAME) documentation/html
+
+$(BUILD):
+	mkdir build
