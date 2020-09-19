@@ -8,6 +8,8 @@ INC = -Iunity\
 -Itest
 
 PROJECT_NAME = pay.out
+BUILD = build
+
 
 $(PROJECT_NAME): $(SRC)
 	gcc $(SRC) $(INC) -o $(PROJECT_NAME)
@@ -19,3 +21,6 @@ doc:
 
 clean:
 	rm -rf $(PROJECT_NAME) documentation/html
+
+$(BUILD):
+	mkdir build
