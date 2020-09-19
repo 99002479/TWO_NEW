@@ -1,13 +1,13 @@
 SRC = main.c\
-src/sum.c\
-test/test_sum.c\
+src/pay.c\
+test/test_pay.c\
 main.c
 
 INC = -Iunity\
 -Iinc\
 -Itest
 
-PROJECT_NAME = sum.out
+PROJECT_NAME = pay.out
 
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
