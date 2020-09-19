@@ -8,6 +8,10 @@ INC = -Iunity\
 -Itest
 
 PROJECT_NAME = pay.out
+
+$(BUILD):
+	mkdir build
+	
 BUILD = build
 
 
@@ -22,5 +26,3 @@ doc:
 clean:
 	rm -rf $(PROJECT_NAME) documentation/html
 
-$(BUILD):
-	mkdir build
