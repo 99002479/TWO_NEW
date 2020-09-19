@@ -187,16 +187,17 @@ int getaccounttype(float old, float pay)
 	   printf("    New balance    :%.2f\n",customer.newbalance);
 	   printf("    Payment date   :%d/%d/%d\n\n",customer.lastpayment.month,customer.lastpayment.day,customer.lastpayment.year);
 	   printf("    Account status :");
+
 	   switch(customer.acct_type)
 	      {
-	      case 'C':
-		 printf("CURRENT\n\n");
+	      case 'I':
+		 printf("INSUFFICIENT BALANCE\n\n");
 		 break;
-	      case 'O':
-		 printf("OVERDUE\n\n");
+	      case 'S':
+		 printf("SUFFICIENT BALANCE\n\n");
 		 break;
-	      case 'D':
-		 printf("DELINQUENT\n\n");
+	      case 'N':
+		 printf("NEGATIVE BALANCE\n\n");
 		 break;
 	      default:
 		 printf("ERROR\\n\n");
