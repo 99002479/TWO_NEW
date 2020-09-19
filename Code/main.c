@@ -8,7 +8,7 @@ void main()
 	  int i,n;
 	  char ch;
 
-	  printf("   CUSTOMER BILLING SYSTEM:\n\n");
+	  printf("   PAYMENT SYSTEM:\n\n");
 	  printf("\n1:    ADD ACOOUNT\n");
 	  printf("2:    SEARCH CUSTOMER\n");
 	  printf("3:    EXIT\n");
