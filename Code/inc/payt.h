@@ -1,5 +1,5 @@
-#ifndef __SUM_H__
-#define __SUM_H__
+#ifndef __PAY_H__
+#define __PAY_H__
 
 int checkbalance(float, float);
 int getaccounttype(float, float);
