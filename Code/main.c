@@ -9,11 +9,9 @@ void main()
 	  char ch;
 
 	  printf("   CUSTOMER BILLING SYSTEM:\n\n");
-	  printf("===============================\n");
 	  printf("\n1:    ADD ACOOUNT\n");
 	  printf("2:    SEARCH CUSTOMER\n");
 	  printf("3:    EXIT\n");
-	  printf("\n================================\n");
 
 	  do{
 	       printf("\nOPTION:");
