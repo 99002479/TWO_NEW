@@ -14,7 +14,7 @@
 		TEST_ASSERT_EQUAL(100, checkbalance(100, 0));
 	}
 
-	void test_account(void)
+	void test_accounttype(void)
 	{
   		TEST_ASSERT_EQUAL(1, getaccounttype(1000, 50));
   		TEST_ASSERT_EQUAL(0, getaccounttype(100, 150));
@@ -29,7 +29,7 @@
   	
 	  	RUN_TEST(test_balance);
 		
-		RUN_TEST(test_account);
+		RUN_TEST(test_accounttype);
 
   		return UNITY_END();
 	}
