@@ -9,10 +9,14 @@ INC = -Iunity\
 
 PROJECT_NAME = pay.out
 
-$(BUILD):
-	mkdir build
+
 	
 BUILD = build
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
 
 
 $(PROJECT_NAME): $(SRC)
@@ -26,3 +30,7 @@ doc:
 clean:
 	rm -rf $(PROJECT_NAME) documentation/html
 
+
+
+$(BUILD):
+	mkdir build
